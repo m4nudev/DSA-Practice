@@ -1,14 +1,14 @@
 public class Fibonacci {
 
-    // Solved by Dynamic Programming. TC := O(n)
+    // Solved by Recursion. TC := O(2^n)
     public static int fib(int n) {
         if (n == 0 || n == 1) {
             return n;
         }
-
         return fib(n-1) + fib(n-2);
     }
 
+    // Solve by Dynamic Programming(Tabulation(Bottom Up)). TC := O(n)
     public static int fibTabulation(int n) {
         int dp[] = new int[n+1];
         dp[0] = 0;
@@ -18,7 +18,7 @@ public class Fibonacci {
         }
         return dp[n];
     }
-    // by recursion Dynamic Programming
+    // Solve by Dynamic Programming(Memoization(Top Down)). TC := O(n)
     public static int fibByDp(int n, int dp[]) {
         if (n == 0 || n == 1) {
             return n;
